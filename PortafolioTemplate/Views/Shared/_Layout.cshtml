@@ -1,42 +1,95 @@
 ﻿<!DOCTYPE html>
-<html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/materialize")
+    @RenderSection("scripts", required: false)
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body style="display:flex; min-height:100vh; flex-direction:column">
+    <header>
+        <nav id="main-nav-mobile-and-tablet" class="no-shadows blue darken-4">
+            <div id="main-navbar" class="nav-wrapper row">
+                <div class="nav-wrapper col s1 m1 l1 center">
+                    <a href="#" data-target="main-menu" class="sidenav-trigger show-on-small"><i class="material-icons">menu</i></a>
+                    <a href="#" style="" class="show-on-medium-and-up"><img height="60" src="~/Resources/Images/logoLarge2.png" /></a>
+
+                </div>
+                <div class="nav-wrapper col s7 m7 l7">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")">Contáctenos</a></li>
+                        <li><a href="@Url.Action("About", "Home")">Aceca de</a></li>
+                    </ul>
+                </div>
+                <div class="nav-wrapper col s2 m2 l2">
+                    <div class="row">
+                        
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+        </nav>
+    </header>
+
+    <main style="flex:1 0 auto;">
+         @RenderBody()
+    </main>
+
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contáctenos</h5>
+                    <div class="row">
+                        <a href="tel:+56972915297">
+                            <div class="col">
+                                <i class="material-icons">local_phone</i>
+                            </div>
+                            <div class="col">
+                                <text class="grey-text text-lighten-4">+56972915297</text>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="grey-text text-lighten-4" href="mailto:jrojasu.comax@gmail.com">
+                            <div class="col">
+                                <i class="material-icons">mail</i>
+                            </div>
+                            <div class="col">
+                                jrojasu.comax@gmail.com
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12 right-align">
+                    <h5 class="white-text">Síguenos</h5>
+                    <ul style="margin-right:30px">
+                        <li>
+                            <a href="https://www.facebook.com"><img src='@Url.Content("~/Resources/Images/facebook.svg")' width="32" /></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        <div class="footer-copyright">
+            <div class="container center">
+                Hecho por el equipo de Resyst Softwares
+            </div>
+        </div>
+    </footer>
 </body>
-</html>
+
+<script>
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+        $(".dropdown-trigger").dropdown();
+        $('.modal').modal();
+        $('.collapsible').collapsible();
+        $('.tooltipped').tooltip();
+    });
+</script>
