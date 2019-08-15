@@ -134,6 +134,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Resources\Images\facebook.svg" />
+    <Content Include="Resources\Images\logo comax icon.png" />
+    <Content Include="Resources\Images\logocomaxicon2.png" />
     <Content Include="Resources\Images\logoLarge2.png" />
     <Content Include="Resources\Images\Logo_COMAX_color-01 %281%29.png" />
     <Content Include="Resources\Images\parallax4.jpg" />

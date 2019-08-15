@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Comax. Servicios integrales en construcción</title>
+    <link rel="icon" href="~/Resources/Images/logocomaxicon2.png">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
@@ -65,16 +66,7 @@
 
                 </div>
                 <div class="nav-wrapper col s7 m7 l7">
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
-                        <li><a href="@Url.Action("Contact", "Home")">Contáctenos</a></li>
-                        <li><a href="@Url.Action("About", "Home")">Aceca de</a></li>
-                    </ul>
-                </div>
-                <div class="nav-wrapper col s2 m2 l2">
-                    <div class="row">
-
-                    </div>
+                    <cite>Hecho por el equipo de Resyst Softwares</cite>
                 </div>
             </div>
         </nav>
@@ -86,20 +78,26 @@
 
     <footer class="page-footer blue darken-4">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
+            <div class="row center">
+                <div class="col l6 s12 offset-l3">
                     <h5 class="white-text">Contáctenos</h5>
-                    <div class="row">
-                        <a href="tel:+56972915297">
-                            <div class="col">
-                                <i class="material-icons">local_phone</i>
-                            </div>
-                            <div class="col">
-                                <text class="grey-text text-lighten-4">+56972915297</text>
-                            </div>
-                        </a>
+                    <div class="divider" style="margin-bottom:5px"></div>
+                    <div class="row center-align" >
+                        <div class="row">
+                            <cite>Su llamada es muy importante para nosotros. Por favor, siéntase seguro de contactarnos y le responderemos lo antes posible.</cite>
+                        </div>
+                        <div class="row" style="align-items: center; display: flex; justify-content:center;">
+                            <a href="tel:+56972915297">
+                                <div class="col">
+                                    <i class="material-icons">local_phone</i>
+                                </div>
+                                <div class="col">
+                                    <text class="grey-text text-lighten-4">+56972915297</text>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="row">
+                    <div class="row center-align" style="align-items: center; display: flex; justify-content:center;">
                         <a class="grey-text text-lighten-4" href="mailto:jrojasu.comax@gmail.com">
                             <div class="col">
                                 <i class="material-icons">mail</i>
@@ -117,7 +115,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container center">
-                Hecho por el equipo de Resyst Softwares
+                © Comax - Hecho por el equipo de Resyst Softwares
             </div>
         </div>
     </footer>
